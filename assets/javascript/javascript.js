@@ -2,26 +2,28 @@
 // Initialize Firebase
 
 var config = {
-  apiKey: "AIzaSyD4BDw7ADNnLlBt8cIXer34_QjYaEEYMKs",
-  authDomain: "traintimings-67897.firebaseapp.com",
-  databaseURL: "https://traintimings-67897.firebaseio.com",
-  projectId: "traintimings-67897",
-  storageBucket: "traintimings-67897.appspot.com",
-  messagingSenderId: "571998930742"
-  };
+  apiKey: "AIzaSyBhcrwYy3bh1YWnpjxHzswqmavH-NnIjso",
+  authDomain: "traintiming-d5ee9.firebaseapp.com",
+  databaseURL: "https://traintiming-d5ee9.firebaseio.com",
+  projectId: "traintiming-d5ee9",
+  storageBucket: "traintiming-d5ee9.appspot.com",
+  messagingSenderId: "983817595739"
+};
   firebase.initializeApp(config);
 
   
   // create a variable to reference the database
   
   var database = firebase.database();
+
   
-  $(".btn").on("click", function (event) {
+  
+  $("#submitBtn").on("click", function (event) {
     event.preventDefault();
   
-    database.ref().set({
-  
-    });
+    // database.ref().set({
+    //   test: 1
+    // });
   
   // Capture User Inputs and store them into variables
   var trainName = $("#trainName-input").val().trim();
@@ -42,7 +44,7 @@ var config = {
     destination: destination,
     frequency: frequency,
     firstTrain: firstTrain,
-  })
+  });
   
     // Output all of the new information into the relevant HTML sections
     $("#trainName-display").text(name);
